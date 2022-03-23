@@ -1,0 +1,40 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="m-auto w-4/5 py-10">
+    <div class="text-center">
+        <h1 class="text-5xl uppercase bold">
+            Male Pedigree
+        </h1>
+    </div>
+        <div class="pt-10">
+           <a href="create"
+           class=" border-double border-4 border-gray-500 px-1 italic text-gray-500">
+            Add male Pedigree &rarr;
+        </a> 
+        </div>
+    
+        @foreach ($mpeds as $mped )
+
+        <div class="m-auto py-10">
+            <span class="uppercase text-blue-700 font-bold text-lg italic">
+              {{ $mped->regName }}
+            </span>
+            <h2 class="text-gray-700">
+                Sire: {{ $mped->sire }}
+             </h2>
+
+             <h2 class="text-gray-700">
+                Dame: {{ $mped->dame }}
+             </h2>
+
+
+        </div>
+
+             
+        @endforeach
+
+    </div>
+
+    
+@endsection
