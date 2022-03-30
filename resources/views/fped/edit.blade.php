@@ -7,7 +7,7 @@
 
 <form action="{{ route('fped.update', ['fped' => $fped->id]) }}" method="POST">
 @csrf
-@method('PUT')
+@method('PATCH')
 
 <div class="stag">
     <label for="callName">Call Name:</label>

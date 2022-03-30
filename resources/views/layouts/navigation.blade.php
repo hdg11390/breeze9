@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -21,11 +21,46 @@
                     <x-nav-link :href="route('create_dog')" :active="request()->routeIs('create_dog')">
                         {{ __('Add Dog') }}
                     </x-nav-link>
+
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('list_dog')" :active="request()->routeIs('list_dog')">
                             {{ __('List Dogs') }}
                         </x-nav-link>
                     </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('fped.index')" :active="request()->routeIs('fped.index')">
+                            {{ __('List Fped') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('mped.index')" :active="request()->routeIs('mped.index')">
+                            {{ __('List Mped') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <div class="group relative dropdown self-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-4 text-staghorn-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                       Dropdown
+                        <div class="group-hover:block dropdown-menu absolute hidden h-auto">
+                
+                        <ul class="top-0 w-48 bg-white shadow px-6 py-8">
+                            <li class="py-1">
+                                {{-- <x-nav-link :href="route('mped.index')" :active="request()->routeIs('mped.index')">
+                                    {{ __('List Mped') }}
+                                </x-nav-link> --}}
+                                <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" href="/mped">List Mped</a></li>
+                            </li>
+                            <li class="py-1"><a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Item 2</a></li>
+                            <li class="py-1"><a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Item 3</a></li>
+                            <li class="py-1"><a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Item 4</a></li>
+                            <li class="py-1"><a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Item 5</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
 
 
                 </div>

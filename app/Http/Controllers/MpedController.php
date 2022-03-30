@@ -86,7 +86,7 @@ class MpedController extends Controller
 
         $mped->update($request->all());
 
-        $request->session()->flash('status', 'Pedigree was updated!');
+       $request->session()->flash('status', 'Pedigree was updated!');
 
         return redirect()->route('mped.show', ['mped'=> $mped->id]);
     }

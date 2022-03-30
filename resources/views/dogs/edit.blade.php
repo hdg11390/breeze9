@@ -53,7 +53,7 @@
 
                     <x-form.textarea name="clearances">{{ old('clearances', $dog->clearances) }}</x-form.textarea>
                     <x-form.input name="birthday" type="date" :value="old('birthday', $dog->birthday)"/>
-                    <x-form.input name="pic" type="file"/>
+                    <x-form.input name="pic" :value="old('pic', $dog->pic)"/>
                     <x-form.input name="wpage" :value="old('wpage', $dog->wpage)"/>
                     <x-form.input name="dogstat" :value="old('dogstat', $dog->dogstat)"/>
                     <x-form.input name="colour" :value="old('colour', $dog->colour)"/>

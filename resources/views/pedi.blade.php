@@ -1,66 +1,47 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Pedigree') }}
+            {{ __('Girls of Staghorn') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+   
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white ">
+              <p class="px-20 pt-8 font-semibold">I'd like to introduce my current female Labs to you. Our girls are all well socialized, friendly, sound bitches, who love to take turns coming inside for a frolic, a snooze on the couch, an extra treat and lots of lovin's from us. Usually as they balance themselves on my lap in the lazy boy (girl) chair! I am very proud of their temperament, their kind ways and winning expressions. Most visitors to our home are impressed with their looks, brains and spirit.</p>
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in to the pedi page!
+                    <div class="container mx-auto px-5 py-10 ">
+                        <div class=" flex justify-center flex-wrap -m-4 ">
+
+                         @foreach (\App\Models\Dog::where('dogstat', '=', 'A')
+                                                    ->where('sex','like','F%')
+                                                    ->orderBy('birthday')->get() as $dog)
+                           
+                          
+                          
+                          <div class="p-4 md:w-80">
+                            <div class="h-full border-2 border-gray-200 shadow-md shadow-staghorn-500 border-opacity-60 rounded-lg overflow-hidden max-w-xs">
+                              <img class="lg:h-48 w-80 object-cover object-center" src="{{ asset( $dog->pic) }}" alt="blog">
+                              <div class="p-6">
+                                 <h1 class="title-font text-lg font-semibold text-gray-900 mb-3 text-center h-14">{{ $dog->regName }}</h1>
+                                <p class="leading-relaxed mb-3 text-center">D.O.B. {{ \Carbon\Carbon::parse($dog->birthday)->format('F j, Y ') }}</p>
+                                <div class="flex items-center flex-wrap ">
+                                  <button class="flex mx-auto mt-2 text-white bg-staghorn-400 border-0 py-2 px-5 focus:outline-none hover:bg-staghorn-500 rounded">{{ $dog->callName }}'s Page</button>
+                               </div>
+                              </div>
+                            </div>
+                          </div>
+                          @endforeach 
+                          
+                            
+                    
+                          </div>
+                        </div>
+                      </div>
                 </div>
-<x-panel>
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    @csrf
 
-                    <x-form.input name="callName"/>
-        
-                    <x-form.input name="regName"/>
-
-                    <x-form.field>
-                        <x-form.label name="sire" />
-        
-                            <select name="mped_id" id="mped_id">
-                                @foreach (\App\Models\Mped::all() as $mped)
-                                <option 
-                                    value="{{ $mped->id }}"
-                                    {{ old('mped_id') == $mped->id ? 'selected' : '' }}
-                                    >{{ ucwords($mped->callName) }}</option>
-                                 @endforeach
-                            </select>
-                            
-                        <x-form.error name="sire" />
-                    </x-form.field>
-
-                    <x-form.field>
-                        <x-form.label name="dame" />
-        
-                            <select name="fped_id" id="fped_id">
-                                @foreach (\App\Models\Fped::all() as $fped)
-                                <option 
-                                    value="{{ $fped->id }}"
-                                    {{ old('fped_id') == $fped->id ? 'selected' : '' }}
-                                    >{{ ucwords($fped->callName) }}</option>
-                                 @endforeach
-                            </select>
-                            
-                        <x-form.error name="dame" />
-                    </x-form.field>
-
-                    <x-form.textarea name="clearances"/>
-                    <x-form.input name="birthday" type="date"/>
-                    <x-form.input name="pic" type="file"/>
-                    <x-form.input name="wpage" type="url"/>
-                    <x-form.input name="dogstat"/>
-                    <x-form.input name="colour"/>
-                    <x-form.input name="sex"/>
-                    <x-form.textarea name="blurb"/>
-                    <x-form.button>Add Dog</x-form.button>
-                 </form>
-            </x-panel>
             </div>
-        </div>
+      
     </div>
+    <x-footer/>
 </x-app-layout>

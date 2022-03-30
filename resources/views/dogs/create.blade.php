@@ -53,7 +53,7 @@
 
                     <x-form.textarea name="clearances"/>
                     <x-form.input name="birthday" type="date"/>
-                    <x-form.input name="pic" type="file"/>
+                    <x-form.input name="pic"/>
                     <x-form.input name="wpage"/>
                     <x-form.input name="dogstat"/>
                     <x-form.input name="colour"/>
