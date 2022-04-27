@@ -21,6 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/our_girls', function () {
     return view('our_girls');
 });

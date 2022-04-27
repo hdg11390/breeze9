@@ -2,8 +2,8 @@
 <div class="flex flex-row flex-wrap  bg-staghorn-400 rounded text-white ">
   <div class="basis-1/3 text-center p-4 text-sm ">
                     <ul>
-                    <li class="hover:text-staghorn-500 hover:font-bold"><a href="boys.php">Our Boys</a></li>
-                    <li class="hover:text-staghorn-500 hover:font-bold"><a href="girls2.php">Our Girls</a> </li>
+                    <li class="hover:text-staghorn-500 hover:font-bold"><a href="our_boys">Our Boys</a></li>
+                    <li class="hover:text-staghorn-500 hover:font-bold"><a href="our_girls">Our Girls</a> </li>
                     <li class="hover:text-staghorn-500 hover:font-bold"><a href="greeters.php">Greeters</a></li>
                     <li class="hover:text-staghorn-500 hover:font-bold"><a href="retired2.php"> Retired</a></li>
                     <li class="hover:text-staghorn-500 hover:font-bold"><a href="rainbowB.php">Rainbow Bridge Boys</a></li>
@@ -25,7 +25,7 @@
   </div>
     <div class="basis-1/3 text-center pt-4 pr-8 text-sm">
       <ul>
-          <li class="hover:text-staghorn-500 hover:font-bold"><a href="index.php">Home</a></li>
+          <li class="hover:text-staghorn-500 hover:font-bold"><a href="home">Home</a></li>
           <li class="hover:text-staghorn-500 hover:font-bold"><a href="about.php">About Us</a></li>
           <li class="hover:text-staghorn-500 hover:font-bold"><a href="upcoming.php">Upcoming Litters</a></li>
           <li class="hover:text-staghorn-500 hover:font-bold"><a href="shownews.php">Show News</a></li>
