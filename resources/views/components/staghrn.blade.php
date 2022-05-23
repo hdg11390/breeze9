@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Staghorn Labradors') }}</title>
-
+        <title>Staghorn Reg'd Labradors</title>
+        <link rel="icon" type="image/png" href="{{ asset('images/icon1.png') }}">
         <!-- Fonts -->
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,13 +14,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"> 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <!-- Swiper's CSS -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
+
         <!-- Scripts -->
-        {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
     </head>
     <body class="bg-staghorn-100 ">
        
@@ -47,11 +48,25 @@
             </div>  
             
             </div>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+              var swiper = new Swiper('.mySwiper', {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                  delay: 5000,
+                  disableOnInteraction: false,
+                },
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+            </script>
 
-       
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="{{ asset('js/app.js') }}"></script> 
-        <script src="{{ asset('js/swiper.js') }}"></script>
-       
     </body>
 </html>

@@ -1,21 +1,23 @@
-<x- staghrn>
+<x-staghrn>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
-    <div class="container max-w-7xl b-0 mx-auto pt-8 bg-white">
-        <x-carousel />
+    <div class="container max-w-7xl  mx-auto pt-8 bg-white">
+      
 
-        <div class="flex justify-center items-center pt-6  mx-4 mx-auto">
+        <div class="flex justify-center items-center py-6  mx-auto">
             <img src="{{ asset('images/welcome.jpg') }}" alt="">
         </div>
             <div class="flex border-b-4 border-black border-double">
             <div class=" flex-1 text-left text-lg font-semibold pl-10 ml-4 pb-2">  {{ \Carbon\Carbon::now()->format('F j, Y ') }} </div>
             <div class="flex   text-right text-lg font-semibold pr-10 mr-4 pb-2">Napanee ON</div>
             </div>
-
+            <div class="mt-4">
+            <x-carousel/>
+            </div>
             <div class="flex py-8">
                 <div class="w-8/12">
                 <p class="prose-p prose-xl px-10 mx-auto">We are Staghorn Reg`d Labradors. In the 25+ years since Staghorn was registered, we have produced several top winning Champions, including Best in Specialty Show winning adults and puppies as well as several obedience and working certificate titled dogs. Many of our dogs have gone on to become definite assets in other breeding programs, both across Canada and the USA. We maintain a small breeding program of select Labrador Retrievers in S.E. Ontario, Canada. We are located 2 hours from Toronto and 2- 1/2 hours from Ottawa.</p>
@@ -37,4 +39,6 @@
                
               </div>   
     </div>
-</x->
+
+
+</x-staghrn>

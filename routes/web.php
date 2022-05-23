@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/our_girls', function () {
     return view('our_girls');
@@ -33,6 +33,10 @@ Route::get('/our_girls', function () {
 Route::get('/our_boys', function () {
     return view('our_boys');
 });
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 // Route::get('/photo/index', function () {
 //     return view('photo/index');
@@ -54,6 +58,7 @@ Route::get('/dogs/edit/{dog}',[DogController::class, 'edit']);
 Route::patch('/dogs/update/{dog}', [DogController::class, 'update'])->name('update_dog');
 Route::get('/dogs/show/{dog}',[DogController::class,'show']);
 Route::post('/store',[DogController::class,'store']);
+Route::get('/retired',[DogController::class,'retired'])->name('retired');
 
 Route::get('/fped',[FpedController::class,'index'])->name('fped.index');
 Route::get('/fped/create',[FpedController::class,'create'])->name('create_fped');

@@ -102,6 +102,22 @@ class DogController extends Controller
      'dog'=> $dog]);
   }
 
+
+  public function retired() {
+
+    $dogs = Dog::where('dogstat', '=', 'R')
+                ->orderBy('birthday');
+
+    // if(request('search')) {
+    //   $dogs->where('callName', 'like', '%' . request('search') . '%');
+    //    }
+      
+    return view('retired', [
+        'dogs'=> $dogs->paginate(9)
+    ]);
+   
+  }
+
   // protected function validateDog([
   //   'callName' =>'required',
   //   'regName' => ['reqired', 'unique']
